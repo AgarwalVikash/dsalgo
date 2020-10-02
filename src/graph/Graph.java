@@ -8,13 +8,12 @@ public class Graph {
 	private Vertex vertexList[];
 	private int adjMat[][];
 	private int number_of_vertex;
-	private Stack<Integer> s;
+
 
 	public Graph() {
 		vertexList = new Vertex[MAX_VERTS];
 		adjMat = new int[MAX_VERTS][MAX_VERTS];
 		number_of_vertex = 0;
-		s = new Stack<Integer>();
 	}
 
 	public Vertex[] getVertexList() {
@@ -41,13 +40,6 @@ public class Graph {
 		this.number_of_vertex = number_of_vertex;
 	}
 
-	public Stack<Integer> getS() {
-		return s;
-	}
-
-	public void setS(Stack<Integer> s) {
-		this.s = s;
-	}
 
 	public int getMAX_VERTS() {
 		return MAX_VERTS;

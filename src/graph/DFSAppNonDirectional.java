@@ -5,6 +5,7 @@ import java.util.Stack;
 public class DFSAppNonDirectional {
 	
 	static Graph theGraph = new Graph();
+	static Stack<Integer> s=new Stack<Integer>();
 	
 	public static void main(String[] args) {
 		
@@ -32,9 +33,8 @@ public class DFSAppNonDirectional {
 	public static void dfs() {
 		theGraph.getVertexList()[0].setVisited(true);
 		theGraph.displayVertex(0);
-		Stack<Integer> s=theGraph.getS();
 		s.push(0);
-		while (!theGraph.getS().isEmpty()) {
+		while (!s.isEmpty()) {
 			int v =theGraph.getAdjUnvisitedVertex(s.peek());
 			if (v == -1) {
 				s.pop();
