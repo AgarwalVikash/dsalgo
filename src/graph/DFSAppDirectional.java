@@ -1,8 +1,13 @@
 package graph;
 
+import java.util.Stack;
+
 public class DFSAppDirectional {
+	
+	static Graph theGraph = new Graph();
+	
 	public static void main(String[] args) {
-		Graph theGraph = new Graph();
+		
 		theGraph.addVertex('A');
 		theGraph.addVertex('B');
 		theGraph.addVertex('C');
@@ -19,8 +24,26 @@ public class DFSAppDirectional {
 		theGraph.addEdgeDirectional(2,4);
 		
 		System.out.println("Visites: ");
-		theGraph.dfs();
+		dfs();
 		System.out.println();
 		
 	}
+
+	public static void dfs() {
+		theGraph.getVertexList()[0].setVisited(true);
+		theGraph.displayVertex(0);
+		Stack<Integer> s=theGraph.getS();
+		s.push(0);
+		while (!theGraph.getS().isEmpty()) {
+			int v =theGraph.getAdjUnvisitedVertex(s.peek());
+			if (v == -1) {
+				s.pop();
+			} else {
+				theGraph.getVertexList()[v].setVisited(true);
+				theGraph.displayVertex(v);
+				s.push(v);
+			}
+		}
+	}
+
 }

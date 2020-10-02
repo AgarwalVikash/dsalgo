@@ -69,23 +69,7 @@ public class Graph {
 		System.out.println(vertexList[v].getLabel());
 	}
 
-	public void dfs() {
-		vertexList[0].setVisited(true);
-		displayVertex(0);
-		s.push(0);
-		while (!s.isEmpty()) {
-			int v = getAdjUnvisitedVertex(s.peek());
-			if (v == -1) {
-				s.pop();
-			} else {
-				vertexList[v].setVisited(true);
-				displayVertex(v);
-				s.push(v);
-			}
-		}
-	}
-
-	private int getAdjUnvisitedVertex(int peek) {
+	public int getAdjUnvisitedVertex(int peek) {
 
 		for (int i = 0; i < getNumber_of_vertex(); i++) {
 			if(adjMat[peek][i]==1 && vertexList[i].isVisited()==false){
