@@ -1,7 +1,5 @@
 package graph;
 
-import java.util.Stack;
-
 public class Graph {
 
 	private final int MAX_VERTS = 20;
