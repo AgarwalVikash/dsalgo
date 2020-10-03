@@ -56,7 +56,7 @@ public class Graph {
 	}
 
 	public void displayVertex(int v) {
-		System.out.println(vertexList[v].getLabel());
+		System.out.print(vertexList[v].getLabel());
 	}
 
 	public int getAdjUnvisitedVertex(int peek) {
