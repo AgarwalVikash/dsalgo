@@ -1,4 +1,4 @@
-package graph;
+package graph.matrixGraph;
 
 public class Vertex {
 	

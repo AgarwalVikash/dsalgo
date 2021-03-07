@@ -1,6 +1,7 @@
 package graph;
 
 import java.util.Stack;
+import graph.matrixGraph.*;
 
 public class MSTApp {
 

@@ -1,7 +1,7 @@
 package graph;
 
 import java.util.Stack;
-
+import graph.matrixGraph.*;
 public class DFSAppNonDirectional {
 	
 	static Graph theGraph = new Graph();

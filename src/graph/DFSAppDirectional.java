@@ -2,6 +2,7 @@ package graph;
 
 import java.util.Stack;
 
+import graph.matrixGraph.*;
 public class DFSAppDirectional {
 	
 	static Graph theGraph = new Graph();

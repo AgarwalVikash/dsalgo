@@ -3,6 +3,7 @@ package graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import graph.matrixGraph.*;
 public class BFSAppDirectional {
 	static Queue<Integer> q = new LinkedList<Integer>();
 	static Graph theGraph = new Graph();
