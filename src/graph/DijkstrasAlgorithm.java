@@ -48,9 +48,11 @@ public class DijkstrasAlgorithm {
 		int finalFlag=0;
 		dist[src]=0;
 		pq.add(new Node(src,0,'0'));
-		while(finalFlag!=v) {
-			finalFlag=finalFlag+1;
+		while(!pq.isEmpty()) {
+			//finalFlag=finalFlag+1;
 			Node qn=pq.remove();
+			if(qn.cost>dist[qn.node])
+				continue;
 			for(Node n:gn.getGraphList().get(qn.node)) {
 				int newcost=qn.cost+n.cost;
 				if(newcost<dist[n.node]) {
