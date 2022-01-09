@@ -11,6 +11,7 @@ public class DijkstrasAlgorithm {
 	private int[] dist;
 	private int v;
 	public DijkstrasAlgorithm(int v) {
+		//we can use minIndexed priority queue to avoid duplicate node key.
 		pq = new PriorityQueue<Node>(v, new Node());
 		dist = new int[v];
 		this.v = v;
